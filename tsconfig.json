@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "strict": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "rootDir": "./src/ts",
+    "outDir": "./dist",
+    "target": "esnext",
+    "module": "esnext",
+    "sourceMap": true,
+    "declaration": true,
+    "allowJs": true,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/ts/**/*"],
+  "exclude": ["node_modules"]
+}

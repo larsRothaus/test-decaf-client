@@ -1,0 +1,44 @@
+{
+  "name": "@useless-media/useless-decaf-client-scaffold",
+  "version": "0.0.0",
+  "license": "ISC",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/useless-media/useless-decaf-client-scaffold.git"
+  },
+  "scripts": {
+    "build:dev": "rollup -c --environment BUILD:development",
+    "build:release": "rollup -c --environment BUILD:production",
+    "serve": "http-server -p 9040 -c-1 --cors",
+    "start:dev": "run-p \"watch:dev\" \"serve\"",
+    "watch:dev": "rollup -c -w --environment BUILD:development"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@useless-media-public/useless-decaf-client-sdk": "^0.0.1",
+    "esbuild": "^0.14.42",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.75.5",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-esbuild": "^4.10.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^4.8.4"
+  }
+}
